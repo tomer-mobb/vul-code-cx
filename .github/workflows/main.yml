@@ -28,7 +28,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      
+      - name: Check env
+        run: |
+          env
 
+      
       - name: Run Mobb GH Fixer monitor for CxOne Comments
         if: always()
         uses: mobb-dev/cx-mobb-fixer-action@v1
