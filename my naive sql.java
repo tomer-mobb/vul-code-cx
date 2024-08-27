@@ -23,7 +23,7 @@ public class SQLInjectionExample extends HttpServlet {
             String queryString = "SELECT * From user_data WHERE and userid= '" + user + "'";
             Statement stmt = con.createStatement();
 
-            ResultSet results = stmt.executeQuery(queryString)
+            ResultSet results = stmt.executeQuery(queryString);
                 
         } catch (Exception e) {
             throw new ServletException(e);
